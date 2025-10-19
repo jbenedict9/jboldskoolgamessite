@@ -1,0 +1,88 @@
+
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  background: linear-gradient(180deg, #1b0034 0%, #090a0f 100%);
+  background-attachment: fixed;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(90deg, #2a004f, #001f3f);
+  box-shadow: 0 0 20px #f0f;
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  box-shadow: 0 0 10px #0ff;
+}
+
+nav a {
+  color: #0ff;
+  text-decoration: none;
+  margin: 0 20px;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+  color: #f0f;
+  text-shadow: 0 0 10px #f0f;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(20, 0, 40, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 15px #0ff;
+}
+
+section img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px #f0f;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+  font-size: 0.9em;
+}
+
+.email-button {
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: #9efc00;
+  background-color: #0a0a0a;
+  border: 2px solid #107c10;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #107c10aa;
+}
+
+.email-button:hover {
+  background-color: #107c10;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px #9efc00, 0 0 40px #107c10;
+  transform: scale(1.05);
+}
+

@@ -1,0 +1,118 @@
+<html>
+<head>
+  <title>Common Issues - JB Old Skool Games</title>
+  <link href="resources/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+<header>
+  <h1>JB Old Skool Games</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="why-restore.html">Why Restore</a>
+    <a href="common-issues.html">Common Issues</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="faq.html">FAQ</a>
+    <a href="services.html">Services & Pricing</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Common Problems with Original Xbox Consoles</h2>
+
+  <p>
+    The Original Xbox was built like a tank, but after 20+ years, even tanks need maintenance.  
+    Below are some of the most common problems I see — and why restoring your console now can 
+    save it from major damage later.
+  </p>
+
+  <section class="issue">
+    <h3>1. Leaking or Bulging Capacitors</h3>
+    <img src="{{ url_for('static', filename='images/leaky_caps_placeholder.jpg') }}" alt="Leaking capacitors on Xbox motherboard">
+    <p>
+      Capacitors on the motherboard and power supply can dry out or leak over time, especially 
+      the infamous <strong>clock capacitor</strong>. Once they start leaking, they release corrosive fluid 
+      that eats away at the copper traces beneath, causing <em>trace rot</em> and long-term board damage.
+    </p>
+    <p>
+      Replacing these early prevents permanent electrical issues and keeps your Xbox running smoothly.
+    </p>
+  </section>
+
+  <section class="issue">
+    <h3>2. Trace Rot and Corrosion</h3>
+    <img src="{{ url_for('static', filename='images/trace_rot_placeholder.jpg') }}" alt="Xbox motherboard trace corrosion example">
+    <p>
+      When capacitor fluid or moisture damages the traces on the motherboard, it can lead to 
+      random crashes, no video output, or the console failing to power on.  
+      Once the copper layers are eaten through, the damage is often irreversible — 
+      which is why prevention is key.
+
+      A telling sign that your console has trace rot is if it automatically turns on when you plug the power cable in or if it powercycles when you hit the eject button.
+    </p>
+  </section>
+
+  <section class="issue">
+    <h3>3. Disc Drive Not Reading Games</h3>
+    <img src="{{ url_for('static', filename='images/drive_not_reading_placeholder.jpg') }}" alt="Xbox disc drive laser issue">
+    <p>
+      The DVD drives in these consoles are mechanical and wear down over time.  
+      Dirty lenses, stretched drive belts, or weak lasers can cause read errors or 
+      make the console refuse to load discs.  
+      Often, a thorough cleaning and belt replacement is all it takes to bring them back.
+    </p>
+  </section>
+
+  <section class="issue">
+    <h3>4. Disc Drive Won’t Eject Properly</h3>
+    <img src="{{ url_for('static', filename='images/drive_eject_placeholder.jpg') }}" alt="Xbox disc tray stuck or misaligned">
+    <p>
+      A classic issue — you press eject, and the tray doesn’t budge, or it only opens halfway.  
+      This is caused by a stretched or broken <strong>eject belt</strong> inside the drive.  
+      Replacing the belt and cleaning the gears restores smooth operation.
+    </p>
+  </section>
+
+  <section class="issue">
+    <h3>5. Overheating and System Freezing</h3>
+    <img src="{{ url_for('static', filename='images/overheating_placeholder.jpg') }}" alt="Xbox overheating or shutdown example">
+    <p>
+      Old thermal paste and dust buildup inside the heatsinks cause the Xbox to run hotter than it should.  
+      Overheating can trigger freezes, random shutdowns, or even permanent GPU damage.  
+      Replacing the thermal paste and cleaning the cooling system is part of every full restoration I do.
+    </p>
+  </section>
+
+  <section class="issue">
+    <h3>6. Red Light Around Eject Button (“FRAG Error”)</h3>
+    <img src="{{ url_for('static', filename='images/frag_error_placeholder.jpg') }}" alt="Xbox front ring red light FRAG error">
+    <p>
+      The red and green flashing ring (nicknamed the <strong>FRAG</strong> error) usually indicates a hardware failure.  
+      It can be caused by shorted traces, bad caps, missing components, or BIOS corruption.  
+      Diagnosing this properly often involves inspecting the board under magnification and testing voltages.
+    </p>
+    <p>
+      Most of the time, it ties back to issues like leaking capacitors or trace rot — 
+      which can be prevented with early maintenance.
+    </p>
+  </section>
+
+  <p>
+    Most of these issues are completely repairable if caught early.  
+    Visit the <a href="{{ url_for('why_restore') }}">Why Restore</a> page to learn why maintenance now 
+    can extend your console’s life for years to come.
+  </p>
+
+   <a href="mailto:jboldskoolgames@gmail.com?subject=Xbox%20Repair%20Inquiry" class="email-button">
+  ✉️ Email Me To Get Your Console Restored
+  </a>
+
+</main>
+
+<footer>
+  <p>© 2025 JB Old Skool Games. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
