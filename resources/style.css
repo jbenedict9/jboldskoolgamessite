@@ -186,3 +186,27 @@ footer {
   transform: translateY(-2px);
 }
 
+.link-pulse {
+  color: #00ff99; /* Soft neon green */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  animation: gentle-pulse-green 3s infinite;
+}
+
+.link-pulse:hover {
+  color: #66ffcc; /* Slightly brighter on hover */
+  text-shadow: 0 0 6px #66ffcc;
+}
+
+@keyframes gentle-pulse-green {
+  0% {
+    text-shadow: 0 0 4px #00ff99, 0 0 8px #00ff99;
+  }
+  50% {
+    text-shadow: 0 0 6px #66ffcc, 0 0 12px #66ffcc;
+  }
+  100% {
+    text-shadow: 0 0 4px #00ff99, 0 0 8px #00ff99;
+  }
+}
