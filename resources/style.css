@@ -187,26 +187,13 @@ footer {
 }
 
 .link-pulse {
-  color: #00ff99; /* Soft neon green */
+  color: #b266ff; /* Clean dark purple text */
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
-  animation: gentle-pulse-green 3s infinite;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .link-pulse:hover {
-  color: #66ffcc; /* Slightly brighter on hover */
-  text-shadow: 0 0 6px #66ffcc;
-}
-
-@keyframes gentle-pulse-green {
-  0% {
-    text-shadow: 0 0 4px #00ff99, 0 0 8px #00ff99;
-  }
-  50% {
-    text-shadow: 0 0 6px #66ffcc, 0 0 12px #66ffcc;
-  }
-  100% {
-    text-shadow: 0 0 4px #00ff99, 0 0 8px #00ff99;
-  }
+  color: #d9b3ff; /* Slightly lighter purple on hover */
+  text-shadow: 0 0 6px #d9b3ff, 0 0 10px #b266ff;
 }
