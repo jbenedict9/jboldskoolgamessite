@@ -14,13 +14,6 @@ header {
   box-shadow: 0 0 20px #f0f;
 }
 
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px; /* space between images and text */
-}
-
 .header-icon {
   width: 100px;
   height: auto;
