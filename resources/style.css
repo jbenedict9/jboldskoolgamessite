@@ -14,6 +14,20 @@ header {
   box-shadow: 0 0 20px #f0f;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* space between images and text */
+}
+
+.header-icon {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(0 0 6px #0ff);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
 h1 {
   font-size: 3em;
   text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
