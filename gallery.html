@@ -1,10 +1,82 @@
-
 <html>
 <head>
   <title>Gallery - JB Old Skool Games</title>
   <link href="resources/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border: 2px solid #0ff;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border: 3px solid #0ff;
+      border-radius: 12px;
+      box-shadow: 0 0 25px #0ff;
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .close-btn {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: #0ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close-btn:hover {
+      color: #f0f;
+      text-shadow: 0 0 15px #f0f;
+    }
+  </style>
 </head>
 <body>
   
@@ -19,25 +91,16 @@
   </nav>
 </header>
 
-  <main>
-    <h2>Before & After Gallery</h2>
-    <section>
-      <h3>Console 1</h3>
-      <img src="resources/images/coming-soon.png" alt="Before Restoration">
-      <img src="resources/images/coming-soon.png" alt="After Restoration">
-    </section>
-    <section>
-      <h3>Console 2</h3>
-      <img src="resources/images/coming-soon.png" alt="Before Restoration">
-      <img src="resources/images/coming-soon.png" alt="After Restoration">
-    </section>
+<main>
+  <h2>Restoration Gallery</h2>
+  <p>Here are some of the consoles I’ve worked on — cleaned, repaired, and brought back to life.</p>
 
-     <a href="mailto:jboldskoolgames@gmail.com?subject=Xbox%20Repair%20Inquiry" class="email-button">
-  ✉️ Email Me To Get Your Console Restored
+  <div class="gallery-grid" id="gallery"></div>
+
+  <a href="mailto:jboldskoolgames@gmail.com?subject=Xbox%20Repair%20Inquiry" class="email-button">
+    ✉️ Email Me To Get Your Console Restored
   </a>
-  </main>
-  
-
+</main>
 
 <footer>
   <div class="footer-contact">
@@ -45,6 +108,59 @@
     <a href="mailto:jboldskoolgames@gmail.com" class="email-link">📧 jboldskoolgames@gmail.com</a>
   </div>
 </footer>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+  <a href="#" class="close-btn">&times;</a>
+  <img id="lightbox-img" src="" alt="Enlarged Console Image">
+</div>
+
+<script>
+  const imageList = [
+    'Image_20250921_130958_109.jpeg',
+    'Image_20250921_130958_458.jpeg',
+    'Image_20250921_130958_557.jpeg',
+    'Image_20250921_130959_956.jpeg',
+    'Image_20250921_131001_298.jpeg',
+    'Image_20250921_131003_820.jpeg',
+    'Image_20250921_131004_521.jpeg',
+    'Image_20250921_131007_275.jpeg',
+    'Image_20250921_131009_586.jpeg',
+    'Image_20250923_174305_773.jpeg',
+    'Image_20250928_202552_780.jpeg',
+    'Image_20250928_202552_846.jpeg',
+    'Image_20250928_202552_950.jpeg',
+    'Image_20250928_202553_114.jpeg',
+    'Image_20251005_231739_851.jpeg',
+    'Image_20251005_231740_966.jpeg',
+    'Image_20251005_231742_493.jpeg',
+    'Image_20251005_231743_366.jpeg',
+    'Image_20251005_231744_229.jpeg',
+    'Image_20251007_181506_573.jpeg'
+  ];
+
+  const galleryDiv = document.getElementById('gallery');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  imageList.forEach(file => {
+    const img = document.createElement('img');
+    img.src = `resources/images/gallery/${file}`;
+    img.alt = 'Restored Xbox Console';
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+    galleryDiv.appendChild(img);
+  });
+
+  // Close lightbox when clicking outside the image
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
