@@ -81,6 +81,12 @@
     </p>
   </section>
 
+  
+  <section class="rescue-counter">
+    <h3>Xboxs Rescued</h3>
+    <div class="counter-display" id="rescued-count">15</div>
+  </section>
+
   <a href="mailto:jboldskoolgames@gmail.com?subject=Xbox%20Repair%20Inquiry" class="email-button">
   ✉️ Email Me To Get Your Console Restored
   </a>
@@ -95,4 +101,20 @@
 </footer>
 
 </body>
+
+<script>
+// Optional: make the number count up on page load
+let count = 0;
+const target = 15; // <-- update this to your current number
+const counter = document.getElementById("rescued-count");
+
+const interval = setInterval(() => {
+  if (count < target) {
+    count++;
+    counter.textContent = count.toString().padStart(3, '0');
+  } else {
+    clearInterval(interval);
+  }
+}, 80);
+</script>
 </html>
