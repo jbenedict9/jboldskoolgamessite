@@ -24,6 +24,9 @@
   <p>Here are some of the consoles I’ve worked on — cleaned, repaired, and brought back to life.</p>
 
   <div class="gallery-grid" id="gallery"></div>
+  
+  <h3>Other Consoles</h2>
+  <div class="gallery-grid" id="other-gallery"></div>
 
   <a href="mailto:jboldskoolgames@gmail.com?subject=Xbox%20Repair%20Inquiry" class="email-button">
     ✉️ Email Me To Get Your Console Restored
@@ -89,6 +92,27 @@
       lightbox.style.display = 'none';
     }
   });
+
+
+  const otherImageList = [
+    'Image_20251113_130532_833.jpeg',
+    'Image_20251113_130533_499.jpeg',
+    'Image_20251113_130534_448.jpeg'
+  ];
+
+  const otherGalleryDiv = document.getElementById('other-gallery');
+
+  otherImageList.forEach(file => {
+    const img = document.createElement('img');
+    img.src = `resources/images/gallery/other/${file}`;
+    img.alt = 'Restored Console';
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+    otherGalleryDiv.appendChild(img);
+  });
+
 </script>
 
 </body>
