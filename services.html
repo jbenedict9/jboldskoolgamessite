@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Services & Pricing - JB Old Skool Games</title>
   <link href="resources/style.css" rel="stylesheet">
@@ -6,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  
+
 <header>
   <img src="resources/images/controller.png" alt="Xbox Controller" class="header-icon">
   <h1>JB Old Skool Games</h1>
@@ -14,6 +15,7 @@
     <a href="index.html">Home</a>
     <a href="why-restore.html">Why Restore</a>
     <a href="common-issues.html">Common Issues</a>
+    <a href="services.html">Services</a>
     <a href="mods.html">Mods</a>
     <a href="gallery.html">Gallery</a>
     <a href="faq.html">FAQ</a>
@@ -22,129 +24,159 @@
 
 <main>
   <h2>Services & Pricing</h2>
-
   <p>
-    I’m not a company — just a guy who loves keeping these old consoles alive.  
-    Below is a breakdown of what I offer, how the process works, and what you can expect when you bring your console in for service.
+    I’m not a company — just a guy who loves keeping these old consoles alive.
+    Below are the services I offer and what you can expect when bringing your Xbox in.
   </p>
 
-  <section>
-    <h3>1. Diagnostic Fee</h3>
-    <p><strong>Price:</strong> $25</p>
-    <p>
-      Every repair starts with a diagnostic. I’ll inspect and test your console to determine what’s wrong.  
-      The fee covers the time spent testing and evaluating — but if you decide to go forward with a repair or restoration, 
-      this $25 is <strong>deducted from your total cost</strong>.
-    </p>
-  </section>
+  <div class="mods-grid">
 
-  <section>
-    <h3>2. Maintenance / Restoration Package</h3>
-    <p><strong>Price:</strong> $65</p>
-    <p>
-      This is my most popular option — perfect for an Xbox that still works but needs some TLC to stay that way.  
-      It includes a full teardown, cleaning, and replacement of key wear components.
-    </p>
+    <!-- Diagnostic -->
+    <div class="mod-card">
+      <img src="resources/images/services/diagnostic.png" alt="Diagnostic Service">
+      <h3>🔍 Diagnostic</h3>
+      <p>
+        Full inspection and testing to identify issues.
+        <br><br>
+        <strong>$25</strong> — applied to your total if you proceed with service.
+      </p>
+    </div>
 
-    <ul>
-      <li>🧹 Blow out dust and debris</li>
-      <li>🧼 Clean plastic components (shell, buttons)</li>
-      <li>🔧 Clean fan and power supply</li>
-      <li>💿 Clean DVD drive and replace drive belt</li>
-      <li>🔋 Inspect capacitors and replace clock capacitor</li>
-      <li>🪛 Clean motherboard and components</li>
-      <li>❄️ Replace CPU and GPU thermal paste</li>
-    </ul>
+    <!-- Restoration Package -->
+    <div class="mod-card">
+      <img src="resources/images/services/restoration.png" alt="Restoration Package">
+      <h3>Restoration Package</h3>
+      <p>
+        Complete teardown, cleaning, and preventative maintenance.
+        <br><br>
+        Includes capacitor inspection, clock cap replacement, new thermal paste,
+        DVD service, and full system cleaning.
+        <br><br>
+        <strong>$65</strong>
+      </p>
+    </div>
+    
 
-    <p>
-      This restores your Xbox to peak performance and gives it a fresh start for the next 20 years.
-    </p>
-  </section>
+    <!-- Capacitors -->
+    <div class="mod-card">
+      <img src="resources/images/services/deep-clean.png" alt="Console Deep Clean">
+      <h3>Console Deep Clean</h3>
+      <p>
+        Full deep clean of console plastics and electronics.
+        <br><br>
+        <strong>$50</strong>
+      </p>
+    </div>
 
-  <section>
-    <h3>3. Additional Repairs (Outside the Package)</h3>
-    <p>
-      If your console has specific issues beyond general restoration, here’s a list of common repair services.
-    </p>
+    <!-- Capacitors -->
+    <div class="mod-card">
+      <img src="resources/images/services/capacitors.png" alt="Capacitor Replacement">
+      <h3>Capacitor Replacement</h3>
+      <p>
+        Replace failed or leaking capacitors to prevent board damage and trace rot.
+        <br><br>
+        <strong>$5 per capacitor</strong> (minimum $15)
+      </p>
+    </div>
 
-    <table class="pricing-table">
-      <tr>
-        <th>Repair</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Capacitor replacement</td>
-        <td>$5 per capacitor (minimum $15)</td>
-      </tr>
-      <tr>
-        <td>Disk drive replacement</td>
-        <td>$60</td>
-      </tr>
-      <tr>
-        <td>Power supply replacement</td>
-        <td>$60</td>
-      </tr>
-      <tr>
-        <td>Controller port replacement</td>
-        <td>$25</td>
-      </tr>
-    </table>
+    <!-- Capacitors -->
+    <div class="mod-card">
+      <img src="resources/images/services/clock.png" alt="Clock Capacitor Replacement">
+      <h3>Clock Capacitor Replacement</h3>
+      <p>
+        Replace failed or leaking clock capacitors to prevent board damage and trace rot.
+        <br><br>
+        <strong>$5</strong>
+      </p>
+    </div>
 
-    <p>
-      Prices include both parts and labor.  
-      Costs may vary depending on part availability or complexity.
-    </p>
-  </section>
+    <!-- Capacitors -->
+    <div class="mod-card">
+      <img src="resources/images/services/thermal-paste.png" alt="Thermal Paste">
+      <h3>Replace Thermal Paste</h3>
+      <p>
+        Replace old thermal paste with fresh new paste.
+        <br><br>
+        <strong>$10</strong>
+      </p>
+    </div>
 
-  <section>
-    <h3>4. Optional Extras</h3>
+    <!-- DVD Drive -->
+    <div class="mod-card">
+      <img src="resources/images/services/belt.png" alt="Disc Drive Belt">
+      <h3>DVD Drive Belt Replacement</h3>
+      <p>
+        Replace old disc drive belt.
+        <br><br>
+        <strong>$5</strong>
+      </p>
+    </div>
 
-    <table class="pricing-table">
-      <tr>
-        <th>Extra</th>
-        <th>Price</th>
-      </tr>
-      <tr>
-        <td>Softmodding and Harddrive Upgrade</td>
-        <td>$40+</td>
-      </tr>
-      <tr>
-        <td>Priority / Rush Service</td>
-        <td>+$20–$50</td>
-      </tr>
-    </table>
+    <!-- DVD Drive -->
+    <div class="mod-card">
+      <img src="resources/images/services/disc-drive.png" alt="DVD Drive Replacement">
+      <h3>DVD Drive Replacement</h3>
+      <p>
+        Replace failing or damaged disc drives.
+        <br><br>
+        <strong>$50+</strong>
+      </p>
+    </div>
 
-    <p>
-      Want to give your Xbox a unique look or need it done fast?  
-      These options let you personalize or expedite your service.
-    </p>
-  </section>
+    <!-- Power Supply -->
+    <div class="mod-card">
+      <img src="resources/images/services/power-supply.png" alt="Power Supply Replacement">
+      <h3>Power Supply Replacement</h3>
+      <p>
+        Replace failing or damaged power supplies.
+        <br><br>
+        <strong>$60</strong>
+      </p>
+    </div>
 
-  <section>
-    <h3>How It Works</h3>
-    <ol>
-      <li>Bring in your Xbox and pay the $25 diagnostic fee.</li>
-      <li>I inspect, test, and identify any issues.</li>
-      <li>We discuss recommended repairs and costs.</li>
-      <li>If you proceed, the $25 diagnostic is applied to your total.</li>
-    </ol>
-    <p>
-      <strong>Transparent pricing.</strong> No surprises — just honest work and a clean, working console at the end.
-    </p>
-  </section>
+    <!-- Controller Ports -->
+    <div class="mod-card">
+      <img src="resources/images/services/controller-port.png" alt="Controller Port Replacement">
+      <h3>Controller Port Replacement</h3>
+      <p>
+        Replace failing or damaged controller ports.
+        <br><br>
+        <strong>$25</strong>
+      </p>
+    </div>
 
-   <a href="mailto:jboldskoolgames@gmail.com?subject=Xbox%20Repair%20Inquiry" class="email-button">
-  ✉️ Email Me To Get Your Console Restored
-  </a>
+    <!-- Controller Ports -->
+    <div class="mod-card">
+      <img src="resources/images/services/buttons.png" alt="Button Replacement">
+      <h3>Button Replacement</h3>
+      <p>
+        Replace failing or damaged cconsole buttons.
+        <br><br>
+        <strong>$25</strong>
+      </p>
+    </div>
+
+    <!-- Controller Ports -->
+    <div class="mod-card">
+      <img src="resources/images/services/trace.png" alt="Trace Rot Repair">
+      <h3>Trace Rot Repair</h3>
+      <p>
+        Repair damaged or rotted traces.
+        <br><br>
+        <strong>$40+</strong>
+      </p>
+    </div>
+
+  </div>
 
 </main>
-
-
 
 <footer>
   <div class="footer-contact">
     <p>© 2026 JB Old Skool Games</p>
-    <a href="mailto:jboldskoolgames@gmail.com" class="email-link">📧 jboldskoolgames@gmail.com</a>
+    <a href="mailto:jboldskoolgames@gmail.com" class="email-link">
+      📧 jboldskoolgames@gmail.com
+    </a>
   </div>
 </footer>
 
