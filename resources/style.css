@@ -162,6 +162,34 @@ footer {
   transform: scale(1.02);
 }
 
+.waitlist-form {
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #0ff;
+  border-radius: 14px;
+  box-shadow: 0 0 18px #0ff;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.waitlist-form iframe {
+  width: 100%;
+  max-width: 640px;
+  min-height: 1200px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 0 14px #0ff;
+  background: #0a0a0a;
+}
+
+@media (max-width: 768px) {
+  .waitlist-form iframe {
+    min-height: 900px;
+  }
+}
+
 .survey-callout h3 {
   font-family: 'Orbitron', sans-serif;
   color: #0ff;
