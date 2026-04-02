@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>JB Old Skool Games Reviews</title>
+  <link href="resources/style.css" rel="stylesheet">
+  <script src="resources/reviews-data.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <img src="resources/images/controller.png" alt="Xbox Controller" class="header-icon">
+  <h1>JB Old Skool Games</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="why-restore.html">Why Restore</a>
+    <a href="common-issues.html">Common Issues</a>
+    <a href="services.html">Services</a>
+    <a href="mods.html">Mods</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="faq.html">FAQ</a>
+    <a href="waitlist.html">Join Waitlist</a>
+  </nav>
+</header>
+
+<main>
+  <section class="survey-callout">
+    <h3>🕹️ Enjoying Your Restored Xbox?</h3>
+    <p>Great feedback from gamers I’ve helped bring back to life. Want to add your own? Click the button below.</p>
+    <a class="survey-button" href="review.html">🚀 Leave a Review</a>
+  </section>
+
+  <section id="reviews-list"></section>
+</main>
+
+<footer>
+  <div class="footer-contact">
+    <p>© 2026 JB Old Skool Games</p>
+    <a href="mailto:jboldskoolgames@gmail.com" class="email-link">📧 jboldskoolgames@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+const reviewsList = document.getElementById('reviews-list');
+
+function renderAllReviews() {
+  if (!reviewsList || !Array.isArray(reviews)) return;
+  reviewsList.innerHTML = '';
+
+  reviews.forEach((item) => {
+    const section = document.createElement('section');
+    section.className = 'testimonial';
+
+    const stars = document.createElement('div');
+    stars.className = 'stars';
+    stars.textContent = starString(item.rating);
+
+    const title = document.createElement('h3');
+    title.textContent = item.title;
+
+    const copy = document.createElement('p');
+    copy.textContent = item.text;
+
+    section.appendChild(stars);
+    section.appendChild(title);
+    section.appendChild(copy);
+
+    reviewsList.appendChild(section);
+  });
+}
+
+renderAllReviews();
+</script>
+</body>
+</html>

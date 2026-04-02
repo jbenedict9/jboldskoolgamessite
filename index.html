@@ -2,6 +2,7 @@
 <head>
   <title>JB Old Skool Games</title>
   <link href="resources/style.css" rel="stylesheet">
+  <script src="resources/reviews-data.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -17,6 +18,7 @@
     <a href="services.html">Services</a>
     <a href="mods.html">Mods</a>
     <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
     <a href="faq.html">FAQ</a>
     <a href="waitlist.html">Join Waitlist</a>
   </nav>
@@ -76,6 +78,16 @@
     </p>
   </section>
 
+  <section class="testimonials-section">
+    <h3>Reviews From Happy Customers</h3>
+    <div class="testimonial-slider" id="testimonial-slider"></div>
+    <div class="testimonial-controls">
+      <button id="testimonial-prev" aria-label="Previous review">❮</button>
+      <button id="testimonial-next" aria-label="Next review">❯</button>
+    </div>
+    <div class="testimonial-dots" id="testimonial-dots"></div>
+  </section>
+
   <section>
     <h3>Let’s Keep It Alive</h3>
     <p>
@@ -118,5 +130,93 @@ const interval = setInterval(() => {
     clearInterval(interval);
   }
 }, 80);
+
+// Reviews carousel rendering (shares the same `reviews` array from reviews-data.js)
+const slider = document.getElementById('testimonial-slider');
+const dotsContainer = document.getElementById('testimonial-dots');
+const nextBtn = document.getElementById('testimonial-next');
+const prevBtn = document.getElementById('testimonial-prev');
+let currentSlide = 0;
+let slideTimer;
+
+function renderTestimonials() {
+  if (!slider || !dotsContainer || !Array.isArray(reviews)) return;
+
+  slider.innerHTML = '';
+  dotsContainer.innerHTML = '';
+
+  reviews.forEach((item, index) => {
+    const article = document.createElement('article');
+    article.className = 'testimonial' + (index === 0 ? ' active' : '');
+    article.setAttribute('data-index', String(index));
+
+    const starBlock = document.createElement('div');
+    starBlock.className = 'stars';
+    starBlock.textContent = starString(item.rating);
+
+    const title = document.createElement('h3');
+    title.textContent = item.title;
+
+    const desc = document.createElement('p');
+    desc.textContent = item.text;
+
+    article.appendChild(starBlock);
+    article.appendChild(title);
+    article.appendChild(desc);
+
+    slider.appendChild(article);
+
+    const dot = document.createElement('button');
+    dot.className = 'dot' + (index === 0 ? ' active' : '');
+    dot.setAttribute('data-index', String(index));
+    dot.setAttribute('aria-label', `Select review ${index + 1}`);
+    dot.addEventListener('click', () => {
+      setSlide(index);
+      startSlideTimer();
+    });
+
+    dotsContainer.appendChild(dot);
+  });
+}
+
+function setSlide(index) {
+  const slides = slider.querySelectorAll('.testimonial');
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  if (!slides.length) return;
+
+  slides.forEach((slide) => slide.classList.remove('active'));
+  dots.forEach((dot) => dot.classList.remove('active'));
+
+  currentSlide = (index + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+}
+
+function nextSlide() {
+  setSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  setSlide(currentSlide - 1);
+}
+
+function startSlideTimer() {
+  clearInterval(slideTimer);
+  slideTimer = setInterval(nextSlide, 5000);
+}
+
+renderTestimonials();
+startSlideTimer();
+
+nextBtn?.addEventListener('click', () => {
+  nextSlide();
+  startSlideTimer();
+});
+
+prevBtn?.addEventListener('click', () => {
+  prevSlide();
+  startSlideTimer();
+});
 </script>
 </html>
