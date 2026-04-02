@@ -174,10 +174,12 @@ footer {
   justify-content: center;
 }
 
-.waitlist-form iframe {
+.waitlist-form iframe,
+.form-embed iframe,
+.survey-callout iframe {
   width: 100%;
-  max-width: 640px;
-  min-height: 1200px;
+  max-width: 100%;
+  min-height: 1500px;
   border: none;
   border-radius: 12px;
   box-shadow: 0 0 14px #0ff;
@@ -185,8 +187,9 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .waitlist-form iframe {
-    min-height: 900px;
+  .waitlist-form iframe,
+  .form-embed iframe {
+    min-height: 1800px;
   }
 }
 
