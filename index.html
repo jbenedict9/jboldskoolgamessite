@@ -1,5 +1,7 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>JB Old Skool Games</title>
   <link href="resources/style.css" rel="stylesheet">
   <script src="resources/reviews-data.js"></script>
@@ -19,44 +21,88 @@
     <a href="mods.html">Mods</a>
     <a href="gallery.html">Gallery</a>
     <a href="reviews.html">Reviews</a>
-    <a href="request.html">Request Repair</a>
     <a href="faq.html">FAQ</a>
+    <a href="request.html">Request Repair</a>
     <a href="waitlist.html">Join Waitlist</a>
   </nav>
 </header>
 
 <main>
-  <section>
-    <h3>About Me</h3>
-    <p>
-      Hey there — I’m Jared, the guy behind JB Old Skool Games.  
-      This isn’t a big repair company or a commercial shop — it’s a personal passion project that grew from my love of the original Xbox and the joy of seeing old hardware come back to life.  
-    </p>
-    <p>
-      I’m based in Huntsville, Alabama, and I primarily serve the local area, working with fellow retro gaming enthusiasts who want to keep their original Xbox consoles running strong.
-    </p>
-    <p>
-      Each console I work on gets the same care and attention I’d give my own collection.  
-      My goal is simple: to help keep these amazing machines alive and running for another 25 years — 
-      whether it’s fixing failed capacitors, cleaning out years of dust, or restoring the original look and feel of your system.
-    </p>
-    <p>
-      Thanks for stopping by, and I hope this site helps you learn a bit about why these consoles are worth saving — and how we can keep them going strong.
-    </p>
+  <section class="hero-section">
+    <div class="hero-copy">
+      <span class="eyebrow">Original Xbox Restoration</span>
+      <h2>Bring your original Xbox back to full strength.</h2>
+      <p>
+        Local Huntsville repairs, vintage restoration, and classic Xbox mods from a specialist who treats every console like a collector’s piece.
+      </p>
+      <div class="hero-actions">
+        <a href="request.html" class="primary-button">Request Repair</a>
+        <a href="services.html" class="secondary-button">View Services</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-card">
+        <strong>20+</strong>
+        <span>Xbox systems rescued</span>
+      </div>
+      <div class="stat-card">
+        <strong>Local</strong>
+        <span>Huntsville pickup available</span>
+      </div>
+      <div class="stat-card">
+        <strong>Specialist</strong>
+        <span>Significant experience with the Original Xbox</span>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h3>What I Do</h3>
-    <ul>
-      <li>🧰 Full system cleaning and restoration</li>
-      <li>🔋 Capacitor replacement and trace repair</li>
-      <li>💿 DVD drive repairs and replacements</li>
-      <li>💡 Console mods — Softmodding, upgraded harddrive, extra fans, and more</li>
-    </ul>
-    <p>
-      Whether it’s restoring the heart of the console or adding a personal touch, 
-      I aim to bring each system back better than new.
-    </p>
+  <section class="service-grid">
+    <h3>What I do</h3>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h4>Restoration & maintenance</h4>
+        <p>Full tear-down, cleaning, recap, thermal refresh, and test runs so your Xbox runs reliably again.</p>
+      </article>
+      <article class="feature-card">
+        <h4>Capacitor & power repair</h4>
+        <p>Replace failing capacitors, repair trace damage, and stop corrosion before it spreads.</p>
+      </article>
+      <article class="feature-card">
+        <h4>DVD drive service</h4>
+        <p>Repair, replace, or remove the DVD drive depending on your goals and console condition.</p>
+      </article>
+      <article class="feature-card">
+        <h4>Mods & upgrades</h4>
+        <p>Softmods, HDD upgrades, improved cooling, and practical hardware customizations.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="process-section">
+    <h3>How it works</h3>
+    <div class="process-grid">
+      <div class="process-step">
+        <span>1</span>
+        <h4>Send your request</h4>
+        <p>Tell me what’s wrong and what you want for your Xbox.</p>
+      </div>
+      <div class="process-step">
+        <span>2</span>
+        <h4>Inspect & quote</h4>
+        <p>I’ll review the console and send a clear repair plan.</p>
+      </div>
+      <div class="process-step">
+        <span>3</span>
+        <h4>Restore & test</h4>
+        <p>I repair, clean, and test until the console is stable and ready to use.</p>
+      </div>
+      <div class="process-step">
+        <span>4</span>
+        <h4>Pickup or ship</h4>
+        <p>Pick it up locally or have it returned safely when the work is done.</p>
+      </div>
+    </div>
   </section>
 
   <section>
@@ -68,13 +114,19 @@
     </p>
   </section>
 
-  <section>
+  <section class="before-after">
     <h3>Before & After</h3>
-    <div class="gallery">
-      <img src="resources/images/before.jpeg" alt="Before Restoration">
-      <img src="resources/images/after.jpg" alt="After Restoration">
+    <div class="before-after-grid">
+      <figure>
+        <img src="resources/images/before.jpeg" alt="Before Restoration">
+        <figcaption>Before: worn, dusty, and struggling to boot.</figcaption>
+      </figure>
+      <figure>
+        <img src="resources/images/after.jpg" alt="After Restoration">
+        <figcaption>After: cleaned, repaired, and ready to play.</figcaption>
+      </figure>
     </div>
-    <p>
+    <p style="margin-top: 10px;">
       Check out the <a href="gallery.html" class="link-pulse">Gallery</a> for more transformations.
     </p>
   </section>
@@ -89,7 +141,7 @@
     <div class="testimonial-dots" id="testimonial-dots"></div>
   </section>
 
-  <section>
+  <section class="keep-alive-section">
     <h3>Let’s Keep It Alive</h3>
     <p>
       Every restored console is a piece of gaming history saved from being forgotten.  
