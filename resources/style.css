@@ -49,17 +49,21 @@ main section {
 
 header {
   text-align: center;
-  padding: 40px 20px;
-  background: linear-gradient(90deg, #2a004f, #001f3f);
-  box-shadow: 0 0 20px #f0f;
+  padding: 48px 20px 24px;
+  min-height: 320px;
+  background: linear-gradient(180deg, rgba(4, 8, 28, 0.75), rgba(4, 8, 28, 0.5)), url("images/banner3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.5), 0 0 20px #f0f;
 }
 
 .header-icon {
-  width: clamp(180px, 24vw, 300px);
+  width: clamp(180px, 26vw, 340px);
   height: auto;
   display: block;
   margin: 0 auto 20px;
-  filter: drop-shadow(0 0 8px #0ff);
+  filter: drop-shadow(0 0 10px rgba(0,255,255,0.85));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
