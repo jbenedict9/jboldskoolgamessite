@@ -55,11 +55,11 @@ header {
 }
 
 .header-icon {
-  width: 100px;
+  width: clamp(180px, 24vw, 300px);
   height: auto;
   display: block;
-  margin: 0 auto;
-  filter: drop-shadow(0 0 6px #0ff);
+  margin: 0 auto 20px;
+  filter: drop-shadow(0 0 8px #0ff);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
