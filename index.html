@@ -43,7 +43,7 @@
 
     <div class="hero-stats">
       <div class="stat-card">
-        <strong>20+</strong>
+        <strong id="hero-rescued-count">0</strong>
         <span>Xbox systems rescued</span>
       </div>
       <div class="stat-card">
@@ -165,7 +165,7 @@
   
   <section class="rescue-counter">
     <h3>Xboxs Rescued</h3>
-    <div class="counter-display" id="rescued-count">15</div>
+    <div class="counter-display" id="rescued-count">25</div>
   </section>
 
 </main>
@@ -180,21 +180,30 @@
 </body>
 
 <script>
-// Optional: make the number count up on page load
-let count = 0;
-const target = 25; // <-- update this to your current number
-const counter = document.getElementById("rescued-count");
+// Optional: make the numbers count up on page load
+function animateCounter({ elementId, target, padLength = 0, suffix = '' }) {
+  const counterElement = document.getElementById(elementId);
+  if (!counterElement) return;
 
-const interval = setInterval(() => {
-  if (count < target) {
-    count++;
-    counter.textContent = count.toString().padStart(3, '0');
-  } else {
-    clearInterval(interval);
-  }
-}, 80);
+  let current = 0;
+  const interval = setInterval(() => {
+    if (current < target) {
+      current++;
+      let text = current.toString();
+      if (padLength > 0) {
+        text = text.padStart(padLength, '0');
+      }
+      counterElement.textContent = text + suffix;
+    } else {
+      clearInterval(interval);
+    }
+  }, 80);
+}
 
-// Reviews carousel rendering (shares the same `reviews` array from reviews-data.js)
+animateCounter({ elementId: 'hero-rescued-count', target: 25 });
+animateCounter({ elementId: 'rescued-count', target: 25, padLength: 3 });
+
+// Reviews carousel rendering (shares the same `reviews` array from reviews-data.js`)}]}
 const slider = document.getElementById('testimonial-slider');
 const dotsContainer = document.getElementById('testimonial-dots');
 const nextBtn = document.getElementById('testimonial-next');
