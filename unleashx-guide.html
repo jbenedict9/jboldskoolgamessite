@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UnleashX Guide - JB Old Skool Games</title>
+  <link href="resources/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+  <img src="resources/images/logo.png" alt="JB Old Skool Games Logo" class="header-icon">
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="why-restore.html">Why Restore</a>
+    <a href="common-issues.html">Common Issues</a>
+    <a href="services.html">Services</a>
+    <a href="mods.html">Mods</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="faq.html">FAQ</a>
+    <a href="request.html">Request Repair</a>
+    <a href="waitlist.html">Join Waitlist</a>
+  </nav>
+</header>
+
+<main>
+  <section class="page-intro">
+    <h2>UnleashX Dashboard Guide</h2>
+    <p>
+      This is the dashboard I commonly ship on modded Original Xbox consoles: a practical, all-in-one launcher and file manager for games, apps, emulators, FTP, settings, and system tools.
+    </p>
+    <p>
+      UnleashX is not just a menu overlay. It is effectively the Xbox's desktop and launcher, replacing the stock Microsoft dashboard with a more flexible interface that makes a modded system easier to use and easier to maintain.
+    </p>
+  </section>
+
+  <section class="faq-grid">
+    <article class="faq-card">
+      <h3>What you are looking at</h3>
+      <p>
+        A typical UnleashX menu may look something like: Launch DVD, Games, Applications, Emulators, File Manager, Settings, Game Saves Manager, Reboot, and Shutdown.
+      </p>
+      <p>
+        Your exact layout will vary depending on the softmod, skin, and settings installed on the box.
+      </p>
+    </article>
+
+    <article class="faq-card">
+      <h3>Why it matters</h3>
+      <p>
+        On a modded Xbox, UnleashX is where you launch your library, browse the drive, copy files, configure network settings, and manage system operations without needing the stock dashboard every time.
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <h3>Core menu sections</h3>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h4>Launch DVD</h4>
+        <p>Starts whatever game is currently in the optical drive. This is the direct equivalent of putting a disc in and launching it from the dashboard.</p>
+      </article>
+      <article class="feature-card">
+        <h4>Games</h4>
+        <p>UnleashX scans folders such as E:\Games or F:\Games and lists the .xbe launchers for each title. A game is usually launched from its default.xbe file inside the folder.</p>
+      </article>
+      <article class="feature-card">
+        <h4>Applications</h4>
+        <p>Apps include homebrew, utilities, and tools such as DVD2Xbox, XBMC, emulators, and FTP-related software. These are usually installed under a dedicated apps directory.</p>
+      </article>
+      <article class="feature-card">
+        <h4>Emulators</h4>
+        <p>Emulators are organized the same way as apps, often with separate folders for NES, SNES, Genesis, or MAME, each with its own file layout and ROM storage.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h3>File Manager is where most day-to-day work happens</h3>
+    <p>
+      The File Manager lets you browse the Xbox filesystem and move around the partitions like C:, E:, F:, and sometimes G:. This is useful for managing saves, checking installed games, organizing apps, and copying content from one location to another.
+    </p>
+    <p>
+      The White button is especially important here. In many screens, the White button opens a context menu so you can Copy, Move, Delete, Rename, Create Folder, or Launch files.
+    </p>
+    <p>
+      One easy rule: when moving or installing large files, copy first and check the destination before you delete anything. It’s much safer than assuming a move is harmless.
+    </p>
+  </section>
+
+  <section>
+    <h3>Copy Disc to HDD</h3>
+    <p>
+      One of the most useful features in a modded Xbox setup is the ability to copy a game directly from the DVD drive to the hard drive. In UnleashX this is normally done from the system menu under:
+    </p>
+    <p>
+      System → Copy Disc to HDD
+    </p>
+    <p>
+      The workflow is straightforward: insert the original Xbox game, open Copy Disc to HDD, choose a destination such as F:\Games or the configured game partition, and let the Xbox read the disc and copy it over to the HDD.
+    </p>
+    <p>
+      This is the standard way to build a digital game library on a modded box. It turns a disc-based game into an installed game folder, usually with a default.xbe launcher inside the game directory, making it easy to launch from the Games menu.
+    </p>
+    <p>
+      The process can take a while because the original Xbox DVD drive is relatively slow, so it is best to leave the console alone while it completes. Do not reset, power off, or eject the disc mid-rip, or the game may be incomplete or fail to launch.
+    </p>
+    <p>
+      Once the copy finishes, the game should appear in the Games list and be launchable from the dashboard exactly like a normal installed title.
+    </p>
+  </section>
+
+  <section>
+    <h3>FTP a game from your computer to the console</h3>
+    <p>
+      In many setups, the faster and cleaner way to move a game onto the Xbox is to use FTP instead of copying from the disc itself. This is especially useful when you already have a game folder on your PC or want to move large collections without doing a full disc rip.
+    </p>
+    <p>
+      The usual flow is: connect the Xbox to your network, find the Xbox IP address in the network settings, then connect with an FTP client such as FileZilla using the Xbox credentials. On many UnleashX installations the default login is username: xbox and password: xbox, though custom setups may differ.
+    </p>
+    <p>
+      Once connected, browse the Xbox filesystem and navigate to the destination folder, usually something like F:\Games or another configured game partition. Drag the game folder from your PC into that directory. If the game is already in a working structure with a default.xbe and related files, the Xbox should recognize it as a proper installed title.
+    </p>
+    <p>
+      FTP is preferred for large copies because it is much more reliable and efficient than using the controller for repeated file operations. It also makes it easy to back up, move, or replace game files without interrupting the dashboard itself.
+    </p>
+    <p>
+      For a modded Original Xbox, the common rule is simple: use the built-in Copy Disc to HDD function when you are ripping a game from an original disc, and use FTP when you are moving files from a computer or managing a larger library.
+    </p>
+  </section>
+
+  <section>
+    <h3>Understanding the partitions</h3>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <h4>C:</h4>
+        <p>Contains the System, dashboard files, and core operating files. This is the most sensitive drive on the box, so do not casually delete or overwrite files here.</p>
+      </article>
+      <article class="feature-card">
+        <h4>E:</h4>
+        <p>Usually holds user data, saves, apps, and game-related content. This is commonly used for general files and is often where the dashboard stores important data.</p>
+      </article>
+      <article class="feature-card">
+        <h4>F:</h4>
+        <p>Commonly becomes a large storage partition for your game library, especially on modded systems with a big HDD. This is where most people keep their Xbox games.</p>
+      </article>
+      <article class="feature-card">
+        <h4>G:</h4>
+        <p>Sometimes used as additional storage space depending on the HDD layout and flash BIOS configuration. It is not always present, and it varies by setup.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h3>FTP is the best management method for a modded Xbox</h3>
+    <p>
+      If the Xbox is connected to the network, UnleashX can expose an FTP server. From a PC, you can browse the console over the network and transfer game files, apps, skins, backups, and updates far more easily than using the controller alone.
+    </p>
+    <p>
+      The normal workflow is simple: find the Xbox IP address in network settings, connect through FTP on your PC, and transfer files directly to the partitions you want.
+    </p>
+    <p>
+      This is the method I rely on for large libraries and installations because it is faster, cleaner, and much less frustrating than fiddling with the controller interface for every transfer.
+    </p>
+    <p>
+      Common credentials on many setups are username: xbox and password: xbox, but a custom setup may differ, so the exact values should be checked on the box before assuming they are correct.
+    </p>
+  </section>
+
+  <section>
+    <h3>What makes UnleashX so useful</h3>
+    <ul>
+      <li>Launch games and apps from one menu</li>
+      <li>Browse the Xbox filesystem without a PC attached</li>
+      <li>Manage saves and files directly on the console</li>
+      <li>Use FTP to transfer large game collections efficiently</li>
+      <li>Configure system and network settings from the dashboard</li>
+      <li>Customize the menu via skins and config.xml</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>About config.xml and skins</h3>
+    <p>
+      The dashboard behavior is heavily influenced by config.xml. That file controls menu layout, startup behavior, and some display settings. If a dashboard looks different from another one, the difference is often the configuration file, not the dashboard itself.
+    </p>
+    <p>
+      Skins change the look and feel of the menu, but the real power is in the layout and file structure. A well set up UnleashX dashboard makes the console feel organized, clean, and easy to use.
+    </p>
+  </section>
+
+  <section>
+    <h3>Recommended layout</h3>
+    <p>
+      A typical, practical setup keeps the dashboard on C:, stores the games on F:, keeps apps and utilities somewhere logical like E:\Apps or E:\Emulators, and uses FTP for installation and bulk management.
+    </p>
+    <p>
+      A clean layout makes the system easier to maintain and avoids accidentally overwriting the dashboard itself while copying games around.
+    </p>
+  </section>
+
+  <section>
+    <h3>Good habits to keep</h3>
+    <ul>
+      <li>Back up before changing dashboard files</li>
+      <li>Use FTP for large transfers instead of controller-only moves</li>
+      <li>Copy important files before deleting or replacing them</li>
+      <li>Keep the dashboard and game library separate where possible</li>
+      <li>Check the IP address and network configuration before trying to FTP in</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>What not to do</h3>
+    <p>
+      Do not casually delete files on C: or overwrite dashboard files without understanding what they are. Doing the wrong thing there can prevent the Xbox from booting properly. For a modded box, the dashboard is a core part of the system, not just a cosmetic launcher.
+    </p>
+    <p>
+      Also avoid confusing Move and Copy. Copy preserves the original file; Move removes it from the source. For anything important, copy first.
+    </p>
+  </section>
+
+  <section>
+    <h3>Bottom line</h3>
+    <p>
+      UnleashX is the dashboard I usually ship on a modded Original Xbox because it gives the console a clean, practical interface, easy access to games and apps, and the ability to manage the system efficiently over FTP.
+    </p>
+    <p>
+      Once you understand the menu, the partitions, and how the dashboard interacts with the Xbox filesystem, it becomes one of the easiest and most powerful ways to live with a modded original Xbox.
+    </p>
+  </section>
+
+  <a href="index.html" class="email-button">← Back to Home</a>
+</main>
+
+<footer>
+  <div class="footer-contact">
+    <p>© 2026 JB Old Skool Games</p>
+    <a href="request.html" class="email-link">📝 Request Repair</a>
+  </div>
+</footer>
+
+</body>
+</html>
